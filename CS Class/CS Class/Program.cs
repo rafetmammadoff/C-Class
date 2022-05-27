@@ -6,7 +6,7 @@ namespace CS_Class
     {
         static void Main(string[] args)
         {
-            #region 1-ci ve 2-ci tapsiriq******************************************************************************************
+            #region 1-ci ve 2-ci tapsiriq**********************************************************************************
             // Notebook class yaradın ve aşağıdakı xüsusiyyətləri olsun 
             // -Name - məhsulun adını ifadə edən xüsusiyyət
             // -BrandName - Notebook - un  brand adı
@@ -77,6 +77,46 @@ namespace CS_Class
             Console.WriteLine($"{car1.Millage} KM surulub");
             #endregion
 
+            string text = "          a ra li di vvv     v       ";
+
+            RemoveSpace(ref text);
+            Console.WriteLine(text);
         }
+        #region 4-ci tapsiriq******************************************************************************************
+        // Parametr olaraq 1 string dəyər qəbul edən və həmin string dəyəri
+        // əvvəlində və sonunda boşluqlar qalmayacaq hala gətirən metod.
+
+        static void RemoveSpace(ref string text)
+        {
+            int ilkIndex = 0;
+            string newText = "";
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] != ' ')
+                {
+                    ilkIndex = i;
+                    break;
+                }
+            }
+            int sonIndex = text.Length - 1;
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                if (text[i] != ' ')
+                {
+                    sonIndex = i;
+                    break;
+                }
+
+            }
+
+            for (int i = ilkIndex; i <= sonIndex; i++)
+            {
+                newText += text[i];
+            }
+            text = newText;
+
+        }
+        #endregion
     }
 }
