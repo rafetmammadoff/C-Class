@@ -41,10 +41,6 @@ namespace CS_Class
                 {
                     Console.WriteLine($"{noteBooks[i].BrandName} {noteBooks[i].Name}");
                 }
-                else
-                {
-
-                }
             }
             #endregion
 
@@ -69,22 +65,21 @@ namespace CS_Class
                 Millage = 200,
             };
 
-            car1.Drive(4);
+            car1.Drive(124);
+            
 
-           
-
-            Console.WriteLine($"{car1.CurrentFuel} l benzin qalir");
-            Console.WriteLine($"{car1.Millage} KM surulub");
+       
             #endregion
 
             string text = "          a ra li di vvv     v       ";
 
             RemoveSpace(ref text);
+            Console.WriteLine("************************************* 4-cu Tapsiriq*******************************");
             Console.WriteLine(text);
         }
         #region 4-ci tapsiriq******************************************************************************************
         // Parametr olaraq 1 string dəyər qəbul edən və həmin string dəyəri
-        // əvvəlində və sonunda boşluqlar qalmayacaq hala gətirən metod.
+        // yalniz əvvəlində və sonunda boşluqlar qalmayacaq hala gətirən metod.
 
         static void RemoveSpace(ref string text)
         {
@@ -117,6 +112,7 @@ namespace CS_Class
             text = newText;
 
         }
+
         #endregion
     }
 }

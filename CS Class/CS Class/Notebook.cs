@@ -6,7 +6,7 @@ namespace CS_Class
 {
     internal class Notebook
     {
-        public Notebook(string name,string brandName,int price)
+        public Notebook(string name, string brandName, int price)
         {
             Name = name;
             BrandName = brandName;
