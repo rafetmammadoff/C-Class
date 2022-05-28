@@ -24,7 +24,7 @@ namespace CS_Class
             Console.WriteLine($"{distance} KM mesafeni gede bilersiniz..");
             Console.WriteLine($"Millage : {Millage + distance} KM");
             Console.WriteLine($"Benzin : {CurrentFuel - requiredFuelForDistance} l");
-            CurrentFuel = CurrentFuel - requiredFuelForDistance; // Benzinin miqdarini azaldib return edirem
+            CurrentFuel = CurrentFuel - requiredFuelForDistance;
             Millage = Millage + distance;
         }
     }
