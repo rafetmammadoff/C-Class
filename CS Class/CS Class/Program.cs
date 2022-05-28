@@ -29,18 +29,28 @@ namespace CS_Class
             noteBooks[7] = new Notebook("Flop22", "Floppier", 890);
         
 
-            Console.WriteLine("Minimum qiymeti daxil edin : ");
+            Console.WriteLine("Minimum qiymeti daxil edin (AZN) : ");
             int minPrice = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Maksimum qiymeti daxil edin : ");
+            Console.WriteLine("Maksimum qiymeti daxil edin (AZN) : ");
             int maxPrice = Convert.ToInt32(Console.ReadLine());
 
+            bool check=false;
             for (int i = 0; i < noteBooks.Length; i++)
             {
                 if (minPrice<noteBooks[i].Price && noteBooks[i].Price < maxPrice)
                 {
                     Console.WriteLine($"{noteBooks[i].BrandName} {noteBooks[i].Name}");
+                    check = true;
                 }
+                
+            }
+            if (check==false)
+            {
+                
+                    Console.WriteLine($"{minPrice} - {maxPrice} AZN araliginda Notebook yoxdur!!!");
+                    
+                
             }
             #endregion
 
